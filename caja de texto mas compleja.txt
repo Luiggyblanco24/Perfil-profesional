@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interfaz de Texto</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="inputText" placeholder="Ingrese texto" autofocus>
+    <button onclick="mostrarResultado()">Ejecutar Acción</button>
+    <label id="resultadoLabel"></label>
+  </div>
+
+  <script>
+    function mostrarResultado() {
+      var texto = document.getElementById('inputText').value;
+      document.getElementById('resultadoLabel').innerText = 'Texto ingresado: ' + texto;
+    }
+  </script>
+</body>
+</html>
